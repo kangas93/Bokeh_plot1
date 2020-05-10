@@ -14,7 +14,7 @@ from bokeh.application.handlers import FunctionHandler
 from bokeh.application import Application
 from bokeh.io import output_notebook, show
 #output_notebook()
-from math import pi
+#from math import pi
 import bokeh.palettes as c
 
 data_raw = pd.read_csv('Motor_Vehicle_Collisions_-_Crashes.csv', sep=',', error_bad_lines=False, index_col=False, dtype='unicode',low_memory = False)
