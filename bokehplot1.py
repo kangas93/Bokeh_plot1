@@ -18,6 +18,7 @@ from os.path import dirname, join
 #data_raw=data_raw.sample(1000)
 #print(data_raw.index)
 
+
 dataList=[]
 for i in range(0,3): #41
     dataList.append(pd.read_csv('splitData/Motor_Vehicle_Collisions_Crashes_'+str(i)+".csv", low_memory=False))
