@@ -42,7 +42,6 @@ def intersection(df):
     return inter
 data_raw['Intersection'] = data_raw.apply(intersection, axis = 1)
 
-
 data_raw['VEHICLE TYPE CODE 1'] = data_raw['VEHICLE TYPE CODE 1'].str.title()
 data_raw['VEHICLE TYPE CODE 2'] = data_raw['VEHICLE TYPE CODE 2'].str.title()
 data_raw['VEHICLE TYPE CODE 3'] = data_raw['VEHICLE TYPE CODE 3'].str.title()
