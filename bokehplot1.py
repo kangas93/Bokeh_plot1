@@ -14,8 +14,15 @@ from math import pi
 from os.path import dirname, join
 
 #data_raw = pd.read_csv(join(dirname(__file__),'data','Motor_Vehicle_Collisions_-_Crashes.csv'))
-data_raw = pd.read_csv('Motor_Vehicle_Collisions_-_Crashes.csv')
-print(data_raw.index)
+#data_raw = pd.read_csv('Motor_Vehicle_Collisions_-_Crashes.csv')
+#print(data_raw.index)
+
+dataList=[]
+for i in range(0,41):
+    dataList.append(pd.read_csv('splitData/Motor_Vehicle_Collisions_Crashes_'+str(i)+".csv", low_memory=False))
+data_raw=dataList[0]
+for i in range(1,41):
+    data_raw=pd.concat([data_raw,dataList[i]])
 
 injured_killed = list(['NUMBER OF PERSONS INJURED','NUMBER OF PERSONS KILLED', 'NUMBER OF PEDESTRIANS INJURED','NUMBER OF PEDESTRIANS KILLED','NUMBER OF CYCLIST INJURED','NUMBER OF CYCLIST KILLED', 'NUMBER OF MOTORIST INJURED','NUMBER OF MOTORIST KILLED'])
 cont_factor = list(['CONTRIBUTING FACTOR VEHICLE 1','CONTRIBUTING FACTOR VEHICLE 2', 'CONTRIBUTING FACTOR VEHICLE 3','CONTRIBUTING FACTOR VEHICLE 4', 'CONTRIBUTING FACTOR VEHICLE 5'])
