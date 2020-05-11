@@ -19,7 +19,7 @@ from os.path import dirname, join
 
 dataList=[]
 for i in range(0,41):
-    dataList.append(pd.read_csv('/splitData/Motor_Vehicle_Collisions_Crashes_'+str(i)+".csv", low_memory=False))
+    dataList.append(pd.read_csv('splitData/Motor_Vehicle_Collisions_Crashes_'+str(i)+".csv", low_memory=False))
 data_raw=dataList[0]
 for i in range(1,41):
     data_raw=pd.concat([data_raw,dataList[i]])
