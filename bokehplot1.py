@@ -15,7 +15,7 @@ from os.path import dirname, join
 
 #data_raw = pd.read_csv(join(dirname(__file__),'data','Motor_Vehicle_Collisions_-_Crashes.csv'))
 data_raw = pd.read_csv('Motor_Vehicle_Collisions_-_Crashes.csv', low_memory=False)
-data_raw=dat_raw.sample(10000)
+data_raw=data_raw.sample(10000)
 #print(data_raw.index)
 
 #dataList=[]
