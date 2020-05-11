@@ -62,7 +62,6 @@ data_raw['CONTRIBUTING FACTOR VEHICLE 5'] = data_raw['CONTRIBUTING FACTOR VEHICL
 data_raw['Intersection'] = data_raw['Intersection'].str.title()
 data_raw.replace('Station Wagon/Sport Utility Vehicle', 'Sport Utility / Station Wagon', inplace = True)
 
-
 data_raw_filtered = data_raw[(data_raw['VEHICLE TYPE CODE 1'] != 'PASSENGER VEHICLE') & (data_raw['VEHICLE TYPE CODE 2'] != 'PASSENGER VEHICLE')
             & (data_raw['VEHICLE TYPE CODE 3'] != 'PASSENGER VEHICLE') & (data_raw['VEHICLE TYPE CODE 4'] != 'PASSENGER VEHICLE') & 
            (data_raw['VEHICLE TYPE CODE 5'] != 'PASSENGER VEHICLE')]
