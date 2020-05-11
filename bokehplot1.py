@@ -13,7 +13,8 @@ from math import pi
 
 from os.path import dirname, join
 
-data_raw = pd.read_csv(join(dirname(__file__),'data','Motor_Vehicle_Collisions_-_Crashes.csv'))
+#data_raw = pd.read_csv(join(dirname(__file__),'data','Motor_Vehicle_Collisions_-_Crashes.csv'))
+data_raw = pd.read_csv('Motor_Vehicle_Collisions_-_Crashes.csv')
 
 
 
